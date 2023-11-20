@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TentangActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="632dp"
+                android:layout_marginLeft="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Selamat datang di Aplikasi Penyewaan Baju Adat Daerah Indonesia."
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:typeface="serif" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:srcCompat="@drawable/logoapp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Aplikasi ini dibuat oleh:"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Indah Febriyana Syahab (2103421006)
+                                  dan Novi Cahya Kamila (2103421015)"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="182dp"
+                    app:srcCompat="@drawable/fotokami" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Dengan beragam pilihan baju adat daerah dari seluruh nusantara, kami hadir untuk memudahkan Anda menyewa baju adat yang sesuai dengan kebutuhan acara spesial Anda!"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:onClick="hal_utama"
+                android:text="Back to Home"
+                android:textSize="12sp"
+                android:textStyle="bold">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
