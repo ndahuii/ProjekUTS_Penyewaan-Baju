@@ -72,6 +72,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Ukuran Baju      : "
+                    android:typeface="serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"/>
+
+                <Spinner
+                    android:id="@+id/ad_ukbaju"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="3dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Lama Sewa        : "
                     android:typeface="serif"
                     android:textStyle="bold"
@@ -91,8 +113,8 @@
                     android:text="Hari"
                     android:typeface="serif"
                     android:textColor="@color/black"/>
-
             </LinearLayout>
+
             <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"

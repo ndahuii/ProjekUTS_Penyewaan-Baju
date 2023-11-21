@@ -1,5 +1,6 @@
 package com.example.uts_semester5;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,14 +14,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SewaBajuActivity extends AppCompatActivity {
 
-    int hargaSewa, jmlLamaSewa, ttlHargaSewa, jmlUang;
+    int  jmlLamaSewa, ttlHargaSewa, jmlUang;
     String sNamaPenyewa;
 
     Spinner adListBaju;
+    Spinner ad_ukBaju;
+
     TextView hargaSewaTextView;
     EditText lamaSewaEditText, uangBayarEditText, namaPenyewaEditText;
 
-    String listBaju[] = {"Baju Adat Sunda", "Baju Adat Jawa", "Baju Adat Padang", "Baju Adat Batak", "Baju Adat Betawi", "Baju Adat Padang", "Baju Adat Bali", "Baju Adat Papua", "Baju Adat Kalimantan","Baju Adat Sulawesi"};
+    String listBaju []= {"Baju Adat Sunda", "Baju Adat Jawa", "Baju Adat Padang", "Baju Adat Batak", "Baju Adat Betawi", "Baju Adat Padang", "Baju Adat Bali", "Baju Adat Papua", "Baju Adat Kalimantan","Baju Adat Sulawesi"};
+    String adukBaju [] = {"S", "M", "L", "XL"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +32,15 @@ public class SewaBajuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sewa_baju);
         namaPenyewaEditText = findViewById(R.id.nama_penyewa);
         adListBaju = findViewById(R.id.ad_listbaju);
+        ad_ukBaju = findViewById(R.id.ad_ukbaju);
         hargaSewaTextView = findViewById(R.id.harga_sewa_baju);
         lamaSewaEditText = findViewById(R.id.lama_sewa);
         uangBayarEditText = findViewById(R.id.uangbayar);
 
         ArrayAdapter<String> adBaju = new ArrayAdapter<>(SewaBajuActivity.this, android.R.layout.simple_spinner_dropdown_item, listBaju);
         adListBaju.setAdapter(adBaju);
+        ArrayAdapter<String> adUk = new ArrayAdapter<>(SewaBajuActivity.this, android.R.layout.simple_spinner_dropdown_item, adukBaju);
+        ad_ukBaju.setAdapter(adUk);
     }
 
     public void tmbl_OK(View view) {
@@ -81,6 +88,7 @@ public class SewaBajuActivity extends AppCompatActivity {
 
                 intent.putExtra("nama", sNamaPenyewa);
                 intent.putExtra("baju", adListBaju.getSelectedItem().toString());
+                intent.putExtra("ukuran", ad_ukBaju.getSelectedItem().toString());
                 intent.putExtra("lama", jmlLamaSewa);
                 intent.putExtra("total", ttlHargaSewa);
                 intent.putExtra("uang", jmlUang);
